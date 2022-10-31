@@ -8,7 +8,6 @@ exports.setup = (app) => {
 
   app.get("/get_a_room", async(req, res) => {
   const room_no = req.query.room
-  console.log(typeof room_no)
   const room_details = await rooms.get_a_room(room_no)
   res.status(200).send(JSON.stringify(room_details));
   });
