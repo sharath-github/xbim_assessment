@@ -45,6 +45,18 @@ describe( "Function: get_a_room", async() =>
 		}
 	});
 
+	it( "Should return error response when given an invalid room number", async() =>
+	{
+		try
+		{
+			await rooms_service.get_a_room("11");
+		}
+		catch ( e )
+		{
+			assert.equal( e.Error,"Invalid room number");
+		}
+	});
+
 });
 
 describe( "Function: get_furniture_details", async() =>
@@ -65,6 +77,18 @@ describe( "Function: get_furniture_details", async() =>
 		catch ( e )
 		{
 			assert.Throw( e );
+		}
+	});
+
+	it( "Should return error response when given an invalid room number", async() =>
+	{
+		try
+		{
+			await rooms_service.get_furniture_details("11");
+		}
+		catch ( e )
+		{
+			assert.equal( e.Error,"Invalid room number");
 		}
 	});
 
