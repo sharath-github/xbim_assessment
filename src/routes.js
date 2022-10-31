@@ -7,12 +7,15 @@ exports.setup = (app) => {
   });
 
   app.get("/get_a_room", async(req, res) => {
-  const room_details = await rooms.get_a_room("11")
+  const room_no = req.query.room
+  console.log(typeof room_no)
+  const room_details = await rooms.get_a_room(room_no)
   res.status(200).send(JSON.stringify(room_details));
   });
 
   app.get("/get_furniture_room", async(req, res) => {
-  const furniture_details = await rooms.get_furniture_details("1")
+  const room_no = req.query.room
+  const furniture_details = await rooms.get_furniture_details(room_no)
   res.status(200).send(JSON.stringify(furniture_details));
   });
 

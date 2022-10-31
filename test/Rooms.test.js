@@ -55,7 +55,7 @@ describe( "Function: get_furniture_details", async() =>
 		assert.isTrue( is_function );
 	});
 
-	it( "Should return a particular room cdetails given a room number", async() =>
+	it( "Should return furniture details as a object", async() =>
 	{
 		try
 		{
