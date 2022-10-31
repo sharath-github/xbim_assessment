@@ -59,7 +59,7 @@ exports.get_a_room = async(room_no) => {
   return room_details
 }
 /**
- * @api {get} /get_furniture_details/:room Get furniture in the room
+ * @api {get} /get_furniture_room/:room Get furniture in the room
  * @apiGroup Rooms
  * @apiParam {room} room Room number
  * @apiSuccess {json} rooms.Furniture Room Furniture
